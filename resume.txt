@@ -1,0 +1,222 @@
+Mariia Khiershi 	Full-Stack Dev | Graphic Designer | 3D Artist
+
+Mariahershi@gmail.com  |  https://github.com/solo-ua |+96181980218 
+
+Summary:
+
+Self-motivated and multidisciplinary individual with a strong foundation in computer science and a passion for creative design. Experienced in both technical and visual domains, with the ability to adapt quickly, work collaboratively, and approach challenges analytically. Always eager to learn and contribute to innovative projects across diverse fields.
+
+
+
+Work Experience:
+
+1. Upwork – Graphic Designer | Illustrator:
+
+Freelancer (Remote) - Contract-related jobs: 
+
+April 2024 – Jun 2025: Working as a graphical designer for a start-up Portuguese clothing brand. Responsible for designing logo, 50+ t-shirt design prints, optimizing the files for printing, and creating 2D and 3D mock-ups.
+
+2. XRWorkout – Virtual Assistant | Graphic Designer | Recruiter | Developer: 
+
+NYC, USA (Remote) - Internship (April 2025 - July 2025) | Part-time 
+
+July 2025 – Present: Led creative production and visual design, supported product development, managed interns and recruitment, and handled scheduling and team coordination.
+
+
+
+3. Mercator – Flutter Developer: 
+
+Beirut, Lebanon (Remote) - Internship 
+
+April 2025 – September: Developing the front end using flutter’s framework and data modeling.
+
+Projects:
+
+Social Productivity Web-App (Personal Project – In Development) 
+
+https://github.com/solo-ua/ataraxia-web-app
+
+The app can be demonstrated via meeting upon request.Overview
+
+A web app combining social 3D virtual workspaces with music streaming, real-time chat, task management, and synced audio.Technology & Skills Used
+
+React JS
+
+React Redux
+
+Node.js, Socket.IO
+
+MySQL
+
+3D: Blender, Adobe Substance Painter
+
+Illustration & UI Design: Krita & Figma
+
+Radio Manager (Personal Project – Completed)
+
+https://github.com/solo-ua/ataraxia-admin-radio-managing
+
+Overview
+
+A web-based admin interface that enables CRUD operations for managing radio stations and hosts.Technology & Skills Used 
+
+User & Station Management: Admins can add, edit, and remove radio hosts and stations.
+
+Tech Stack: React
+
+
+
+RESTful API – PHP-based (Personal Project – In Development)
+
+https://github.com/solo-ua/ataraxia-api-php
+
+Hosted on AwardSpace.comOverview
+
+A PHP-based RESTful API that supports CRUD operations for managing radio stations, user profiles, and real-time interactions within the Ataraxia platform.
+
+Technology & Skills Used
+
+CRUD Operations
+
+Secure Data Handling: Implements secure user authentication processing and storage (sensitive data is encrypted).
+
+Tech Stack: PHP, MySQ
+
+Creative Projects:
+
+Web App Interface Design 
+
+(Personal Project – UI Design)
+
+https://www.figma.com/design/leQTIpK76TYvxWIGhislFI/Ataraxia-UI-Design?node-id=601-9&t=vIvsERuaQkZMe0zS-1
+
+Designed the core interface elements for Ataraxia web app.
+
+Tools Used: 
+
+Figma
+
+Krita
+
+Blender for 3D-rendered elements.
+
+T-Shirt Design Portfolio Homepage 
+
+(Personal Project – UI & Graphic Design)
+
+https://www.figma.com/design/TUbiE0zbaPF8nTcKs7LmIq/Web-design-demonstration?node-id=34-836&p=f&t=hrvgeJ1hQmk81P3i-0
+
+Designed a homepage to showcase custom T-shirt graphics created for a Portuguese startup clothing brand.
+
+Tools Used: 
+
+Figma 
+
+Krita 
+
+Adobe Photoshop
+
+
+
+Skills:
+
+Front-end skills: 
+
+Vite and React with JavaScript for web-programming.
+
+Flutter for mobile programming.
+
+Additional libraries learnt: React-Redux.
+
+UI Design with Figma.
+
+Additional libraries learnt: Three.JS
+
+Back-end skills: 
+
+Relational databases with MySQL and Microsoft SQL. 
+
+REST API using php which handles CRUD operation with MySQL database.
+
+Additional libraries learnt: Socket.IO with NodeJS
+
+
+
+
+
+Other:
+
+Java
+
+JavaScript
+
+C#
+
+PHP
+
+TypeScript knowledge
+
+HTML and CSS.
+
+Attention to Detail
+
+Organizational skills
+
+Quick-learner
+
+Creative
+
+Problem solving skills
+
+Verbal communication skills
+
+Graphic design:
+
+Illustrations
+
+3D Modelling
+
+UI Design
+
+Frameworks:
+
+.NET with C#  
+
+Flutter with Dart
+
+Software Skills:
+
+Microsoft Word, PowerPoint, and Excel
+
+Visual Studio Code
+
+Visual Studio
+
+Android Studio
+
+Adobe Substance Painter
+
+Blender 3D
+
+Krita
+
+Lingual:
+
+English: Fluent. Strong oral and written communication.
+
+Russian: Fluent. Strong oral and written communication.
+
+Ukrainian: Fluent. Good oral and written communication.
+
+Arabic: Native. Good oral and written communication
+
+
+
+Education:
+
+Lebanese International University: 2022 - 2025
+
+Bachelor in Computer Science – 3.68 GPA - Awarded Dean’s Honor List 4 times.
+
+Achieved a full understanding of programming basics such as Object-Oriented programming and data structures. Furthermore, completed courses associated with software engineering, machine learning, mobile programming and web development.  
+

@@ -1,0 +1,51 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-left h2 { margin-bottom: 24px; }
+.about-left h2 em { color: var(--accent); font-style: italic; }
+.about-bio {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+.about-dl { display: inline-block; font-size: 0.78rem; }
+
+.skills-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-tag {
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+.skill-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* Stagger animation */
+.about-left.fade-in { transition-delay: 0s; }
+.about-right.fade-in { transition-delay: 0.15s; }
+
+@media (max-width: 780px) {
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+}

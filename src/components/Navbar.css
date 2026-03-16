@@ -1,0 +1,95 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  transition: background var(--transition), backdrop-filter var(--transition), border-color var(--transition);
+  border-bottom: 1px solid transparent;
+}
+.navbar.scrolled {
+  background: rgba(54, 57, 66, 0.527);
+  backdrop-filter: blur(10px);
+  border-color: var(--border);
+}
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.navbar-links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.navbar-links a:hover { color: var(--text); }
+
+.navbar-cta {
+  padding: 8px 22px;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  border-radius: var(--radius);
+  font-size: 0.75rem !important;
+  letter-spacing: 0.14em !important;
+  transition: background var(--transition), color var(--transition) !important;
+}
+.navbar-cta:hover {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform var(--transition), opacity var(--transition);
+}
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 680px) {
+  .burger { display: flex; }
+  .navbar-links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(10, 10, 10, 0.97);
+    backdrop-filter: blur(20px);
+    padding: 24px 0 40px;
+    gap: 24px;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.4s ease;
+  }
+  .navbar-links.open { clip-path: inset(0 0 0% 0); }
+}
