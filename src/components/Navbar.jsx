@@ -41,7 +41,7 @@ export default function Navbar() {
           ))}
           <a
             className="navbar-cta"
-            href="/MariiaKhiershi/resume.docx"
+            href={`${import.meta.env.BASE_URL}resume.docx`}
             download
           >
             Resume ↓

@@ -64,7 +64,7 @@ function processFile(filePath, fileName, catName, subCatName) {
   
   fs.copyFileSync(sourcePath, destPath)
   
-  const srcUrl = `/MariiaKhiershi/assets/${destDirName}/${fileName}`
+  const srcUrl = `/portfolio/assets/${destDirName}/${fileName}`
   
   items.push({
     id: idCounter++,
@@ -86,7 +86,7 @@ for (const cat of CATEGORIES) {
   processCategory(cat)
 }
 
-const dataContent = `export const BASE = '/MariiaKhiershi'\n\nexport const items = ${JSON.stringify(items, null, 2)}\n\nexport const categories = [...new Set(items.map(i => i.cat))]\nexport const subcategories = items.reduce((acc, item) => {\n  if (!acc[item.cat]) acc[item.cat] = new Set()\n  acc[item.cat].add(item.subCat)\n  return acc\n}, {})\n\n// Convert Sets to Arrays\nObject.keys(subcategories).forEach(k => subcategories[k] = [...subcategories[k]])\n`
+const dataContent = `export const BASE = '/portfolio/'\n\nexport const items = ${JSON.stringify(items, null, 2)}\n\nexport const categories = [...new Set(items.map(i => i.cat))]\nexport const subcategories = items.reduce((acc, item) => {\n  if (!acc[item.cat]) acc[item.cat] = new Set()\n  acc[item.cat].add(item.subCat)\n  return acc\n}, {})\n\n// Convert Sets to Arrays\nObject.keys(subcategories).forEach(k => subcategories[k] = [...subcategories[k]])\n`
 
 fs.writeFileSync(DATA_FILE, dataContent)
 console.log(`Generated data for ${items.length} items.`)
