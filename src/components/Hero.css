@@ -39,6 +39,7 @@
   opacity: 0;
   animation: fadeUp 0.9s 0.4s forwards;
   margin-bottom: 28px;
+  font-size: 4em;
 }
 .hero-name span {
   color: var(--accent);
