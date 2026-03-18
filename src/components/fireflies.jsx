@@ -129,7 +129,7 @@ export default function Fireflies() {
     canvas.height = height;
 
     const fireflies = [];
-    const count = 70;
+    const count = 50;
 
     // create particles
     for (let i = 0; i < count; i++) {
