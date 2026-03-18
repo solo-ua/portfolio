@@ -113,6 +113,8 @@
 
 .blob-container:hover img {
   transform: scale(1.02);
+  border: solid 1px rgba(253, 226, 119, 0.849);
+  box-shadow: 0 0px 10px rgba(255, 222, 76, 0.352);
 }
 
 .blob-bg {
