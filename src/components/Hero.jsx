@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 import Fireflies from "./fireflies";
 
+import pfpImg from "../assets/photo_2026-03-18_12-03-39.jpg";
+
 export default function Hero() {
   const taglineRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -67,7 +69,7 @@ export default function Hero() {
               </div>
             )}
             <img
-              src="https://previews.dropbox.com/p/thumb/AC-Agp9210f1Qp65Tku--A6qNW1YTBd1tDegChw17cpaYAV2bzJ7lsd9HS-evSpTz-HcxmB0yMHCUoLsHrN4M4WQ5U7YCgn9e4fvM2AxvNU1OOWcteMHMFKH7y4h5tgCI_Rj2A_57TlIlsYHucJJNCfQEkESjWBX_QCPLMSzfuwU4P4qW2Dix2ZYEfR2HP0lM0vtVt3e7y6nCg7ZE4irZ5sAV50Oz1H7KrXLD9A_YpOEfU7xIWTKS1E5EAqd2ZoRsbfmOqr7p9cFJhmCEtVW2nRjB2oVgFCthN5fUAdum4QSog/p.jpeg"
+              src={pfpImg}
               alt="Mariia Khiershi"
               onLoad={() => setIsLoaded(true)}
               style={{ opacity: isLoaded ? 1 : 0 }}
