@@ -1,0 +1,302 @@
+.transition-section-wrapper {
+  position: relative;
+  height: 200vh; /* Set scroll height for page turn interaction */
+  background-color: var(--bg);
+}
+
+.transition-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── OVERLAY: The Cover Page (Peeled away) ───────────────────── */
+.peel-overlay-page {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, background-color var(--transition-speed) var(--transition-ease);
+}
+
+.overlay-page-grid {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 48px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.overlay-line-v {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--border);
+  opacity: 0.5;
+}
+
+.overlay-page-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: 22%; /* Align to grid line */
+}
+
+.overlay-label {
+  color: var(--accent);
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 1.5rem;
+}
+
+.overlay-heading {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1.05;
+  margin-bottom: 2rem;
+}
+
+.overlay-p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 3.5rem;
+}
+
+.peel-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 6px;
+}
+
+.peel-scroll-hint span {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* ── CORNER FLAP: Backside of peeled page ───────────────────── */
+.peel-corner-flap {
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  /* Dark textured paper styling for page underside */
+  background: linear-gradient(135deg, #1b1e24 0%, #2f343f 40%, #15171c 50%, #0c0d10 65%, #050507 100%);
+  filter: drop-shadow(-12px -12px 18px rgba(0, 0, 0, 0.75));
+  pointer-events: none;
+  transform: translateZ(0); /* Hardware accelerate */
+}
+
+.peel-corner-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.peel-reflection-line {
+  position: absolute;
+  inset: 0;
+  /* Soft white fold glare */
+  background: linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.08) 50%, transparent 52%);
+  pointer-events: none;
+}
+
+/* ── UNDERLAY: Split Screen Choice ──────────────────────────── */
+.choice-underlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--bg);
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.choice-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s var(--transition-ease);
+  border-right: 1px solid var(--border);
+}
+
+.choice-col:last-child {
+  border-right: none;
+}
+
+.choice-col-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  transition: opacity 0.6s var(--transition-ease), transform 0.6s var(--transition-ease);
+  pointer-events: none;
+}
+
+/* Tech Grids */
+.grid-pattern {
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Creative Radial Blurs */
+.glow-pattern {
+  background: radial-gradient(circle at 70% 30%, rgba(217, 56, 58, 0.18) 0%, transparent 50%),
+              radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.18) 0%, transparent 50%);
+  filter: blur(40px);
+}
+
+.choice-col-content {
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choice-num {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  transition: color 0.4s ease;
+}
+
+.choice-heading {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  transition: transform 0.4s var(--transition-ease), color var(--transition-speed) var(--transition-ease);
+}
+
+.choice-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  transition: color 0.4s ease;
+}
+
+.choice-btn {
+  pointer-events: none; /* Let parent click trigger */
+  opacity: 0.8;
+}
+
+/* ── Choice Hover Effects ────────────────────────────────────── */
+.tech-col:hover {
+  background-color: #0b0d10;
+}
+
+.tech-col:hover .choice-col-bg {
+  opacity: 0.35;
+  transform: scale(1.05);
+}
+
+.creative-col:hover {
+  background-color: #110f12;
+}
+
+.creative-col:hover .choice-col-bg {
+  opacity: 0.3;
+  transform: scale(1.08);
+}
+
+.choice-col:hover .choice-heading {
+  transform: translateY(-4px);
+}
+
+.choice-col:hover .choice-num {
+  color: var(--accent);
+}
+
+.choice-col:hover .choice-desc {
+  color: var(--text);
+}
+
+.choice-col:hover .choice-btn {
+  border-color: var(--text);
+  color: var(--bg);
+  background-color: var(--text);
+  opacity: 1;
+}
+
+/* ── Selection States (Fade outs on click) ──────────────────── */
+.choice-col.selected {
+  flex-grow: 2;
+}
+
+/* ── Responsive Styling ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .overlay-page-content {
+    margin-left: 0;
+  }
+  
+  .overlay-line-v {
+    display: none;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .choice-col {
+    padding: 40px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .choice-col:last-child {
+    border-bottom: none;
+  }
+
+  .choice-desc {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ── Light Mode overrides for Page Turn ────────────────────── */
+body[data-light="true"] .peel-corner-flap {
+  background: linear-gradient(135deg, #ffffff 0%, #edeef2 40%, #e2e8f0 50%, #cbd5e1 65%, #94a3b8 100%);
+  filter: drop-shadow(-8px -8px 12px rgba(0, 0, 0, 0.15));
+}
+
+body[data-light="true"] .tech-col:hover {
+  background-color: #e2e8f0;
+}
+
+body[data-light="true"] .creative-col:hover {
+  background-color: #ebdcdb;
+}

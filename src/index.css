@@ -1,84 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+/* ── Core Design System & Global Styles ──────────────────────── */
 
-/* ── CSS Variables ──────────────────────────────── */
 :root {
-  --bg: #313339;
-  --bg2: #313035;
-  --bg3: #2f2a33;
-  --accent: #7ec38e;
-  --accent2: #a19fc3;
-  --accent3: #ddf0f9;
-  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
-  --accent-dim: rgba(110, 142, 201, 0.18);
-  --text: #edf5f3;
-  --text-muted: #b0b1bd;
-  --border: rgba(145, 174, 217, 0.15);
-  --nav-h: 68px;
-  --radius: 4px;
-  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Default dark theme tokens (Neutral transition state) */
+  --bg: #0d0e11;
+  --bg-secondary: #14161b;
+  --bg-tertiary: #1b1e24;
+  --accent: #a0a0a0;
+  --accent-rgb: 160, 160, 160;
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.08);
+  --nav-h: 74px;
+  --radius: 2px;
+  --transition-speed: 0.5s;
+  --transition-ease: cubic-bezier(0.25, 1, 0.5, 1);
+  --font-serif: 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
 }
 
-/* ── Reset ──────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* ── Technical Theme (Graphite & Cyan highlights) ───────────── */
+body[data-theme="tech"] {
+  --bg: #090a0c;
+  --bg-secondary: #101114;
+  --bg-tertiary: #16181c;
+  --accent: #a5f3fc; /* Pale cyan accent */
+  --accent-rgb: 165, 243, 252;
+  --text: #e5e7eb;
+  --text-muted: #8892b0;
+  --border: rgba(165, 243, 252, 0.08); /* Pale cyan borders */
+}
+
+/* ── Creative Theme (Expressive margins & Muted colors) ──────── */
+body[data-theme="creative"] {
+  --bg: #121113;
+  --bg-secondary: #1a181b;
+  --bg-tertiary: #232025;
+  --accent: #d9383a; /* Muted crimson */
+  --accent-rgb: 217, 56, 58;
+  --accent-alt: #3b82f6; /* Muted blue */
+  --text: #fbfbfb;
+  --text-muted: #9ca3af;
+  --border: rgba(217, 56, 58, 0.15);
+}
+
+/* ── Light Mode Color Variable Overrides ─────────────────────── */
+body[data-light="true"] {
+  --bg: #f5f6f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #edeef2;
+  --accent: #555555;
+  --accent-rgb: 85, 85, 85;
+  --text: #1a1c20;
+  --text-muted: #6b7280;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+body[data-light="true"][data-theme="tech"] {
+  --bg: #f0f4f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e1e8f0;
+  --accent: #0284c7; /* Sky blue in light tech */
+  --accent-rgb: 2, 132, 199;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+body[data-light="true"][data-theme="creative"] {
+  --bg: #faf9f6; /* Pale warm cream paper */
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1efe9;
+  --accent: #b91c1c; /* Crimson */
+  --accent-rgb: 185, 28, 28;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --border: rgba(185, 28, 28, 0.12);
+}
+
+/* ── Reset & Baseline ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  line-height: 1.7;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.62;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-}
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { cursor: pointer; font-family: inherit; border: none; background: none; }
-
-/* ── Typography ─────────────────────────────────── */
-h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; line-height: 1.15; }
-h1 { font-size: clamp(3rem, 8vw, 6.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: 1.25rem; }
-
-/* ── Section Wrapper ────────────────────────────── */
-section { padding: 100px 0; }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
+  transition: background-color var(--transition-speed) var(--transition-ease),
+              color var(--transition-speed) var(--transition-ease),
+              border-color var(--transition-speed) var(--transition-ease);
 }
 
-/* ── Section Label ──────────────────────────────── */
-.section-label {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 22px;
-}
-.section-label::before {
-  content: '';
+img {
   display: block;
-  width: 36px;
-  height: 1px;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* ── Custom Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
 
-/* ── Fade-in on scroll ──────────────────────────── */
-.fade-in {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: none;
+/* ── Typography & Editorial System ──────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-/* ── Scrollbar ──────────────────────────────────── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Monospace Details */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Layout & Structure ──────────────────────────────────────── */
+section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}
+
+/* ── Section Header / Label ─────────────────────────────────── */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--accent);
+  opacity: 0.5;
+}
+
+/* ── Premium Buttons ────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  background: transparent;
+  transition: all 0.3s var(--transition-ease);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.btn-primary {
+  background-color: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--text);
+}
+
+.btn-secondary {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.btn-ghost {
+  color: var(--text-muted);
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+/* ── Reveal Animations ──────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--transition-ease),
+              transform 0.8s var(--transition-ease);
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(20, 22, 27, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}

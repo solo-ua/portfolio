@@ -1,0 +1,349 @@
+# Portfolio Redesign Specification
+
+## Objective
+
+Redesign my portfolio from the ground up. The current version feels AI-generated, generic, and lacks a strong design identity. The new website must communicate a clear, premium personal brand that reflects both sides of my professional career while maintaining exceptional usability, performance, and craftsmanship.
+
+The website should feel intentionally designed rather than template-based.
+
+---
+
+# Context
+
+I have two equally important professional identities:
+
+1. **Software Engineer / Computer Science Graduate** 
+Folder location: "\portfolio\CS-TECH Mariia Khiershi  CV.pdf"
+
+2. **Creative Professional**
+Folder location: "\portfolio\Designer Mariia Khiershi  CV.pdf"
+
+Analyze both CVs (Technical and Creative) and extract all relevant information, projects, skills, achievements, education, experience, and professional summaries. The website content should be generated from these documents rather than copied manually.
+
+Do not merge the two careers into one section—they should coexist while maintaining their own visual identity.
+
+---
+
+# Design Philosophy
+
+The entire website should exist as a **single-page experience**.
+
+Design language:
+
+* Minimal Gothic
+* Premium
+* Editorial
+* Architectural
+* Dark
+* Elegant
+* Intentional
+* High-end portfolio rather than startup landing page
+
+Avoid:
+
+* Neon cyberpunk
+* Generic AI gradients
+* Excessive glowing effects
+* Heavy motion
+* Template aesthetics
+* Overly playful UI
+
+The design should feel timeless and handcrafted.
+
+Think:
+
+* brutal minimalism
+* premium typography
+* negative space
+* refined interactions
+* restrained animation
+* Glassmorphism
+
+---
+
+# Performance Requirements
+
+Performance is a priority.
+
+Requirements:
+
+* Extremely fast loading
+* Lazy loading wherever possible
+* Minimal JavaScript
+* Optimized assets
+* Smooth 60fps animations
+* Responsive across all screen sizes
+* Accessible
+* SEO-friendly
+* Clean semantic HTML
+
+Animations should enhance the experience instead of becoming the experience.
+
+---
+
+# Website Flow
+
+## Hero Section
+
+The landing section introduces me professionally before revealing the split between my careers.
+
+Include:
+
+* Name
+* Professional title
+* Short professional summary
+* Elegant typography
+* Minimal animated background (very subtle)
+* Call-to-action encouraging scrolling
+
+The hero should immediately communicate that I operate in both technology and creative design.
+
+---
+
+## Transition Section
+
+As the user scrolls, the page should transition into a metaphorical "choice."
+
+Instead of abruptly dividing the page, create a smooth physical page-turn transition.
+
+The effect should resemble opening a book from its bottom corner.
+
+Imagine grabbing the bottom corner of a page and smoothly turning it.
+
+The page gradually unfolds into two possible paths.
+
+This interaction should feel elegant rather than gimmicky.
+
+---
+
+# Dual Portfolio Experience
+
+After the transition, the website separates into two independent experiences.
+
+The visitor chooses which side to explore.
+
+Each side should maintain the same overall layout but have its own visual language.
+
+---
+
+# Technical Portfolio
+
+Visual Identity:
+
+* monochromatic
+* charcoal
+* graphite
+* black
+* soft grey accents
+
+Typography:
+
+* modern monospace for code accents
+* elegant sans-serif for body content
+
+Mood:
+
+* futuristic
+* clean
+* surreal
+* understated
+* intelligent
+
+Avoid stereotypical hacker aesthetics.
+
+Instead, use subtle engineering-inspired design.
+
+Possible visual elements:
+
+* faint grid systems
+* wireframe motifs
+* node graphs
+* mathematical alignment
+* blueprint aesthetics
+* subtle code snippets as decorative elements
+* thin technical lines
+* architectural spacing
+
+Sections:
+
+* About
+* Professional Summary
+* Technical Skills
+* AI Experience
+* Tech Stack
+* Featured Projects
+* Work Experience
+* Education
+* Certifications (if applicable)
+* GitHub
+* Download Technical CV
+
+Project cards should include:
+
+* technologies used
+* role
+* summary
+* challenges solved
+* GitHub/demo links
+* screenshots if available
+
+---
+
+# Creative Portfolio
+
+Visual Identity:
+
+Primary palette:
+
+* greys
+* muted blue
+* muted crimson
+
+(Colors should be easily replaceable later.)
+
+Mood:
+
+* editorial
+* artistic
+* premium
+* gallery-like
+* atmospheric
+
+Typography should feel expressive while remaining minimal.
+
+Sections:
+
+* About
+* Creative Summary
+* Services
+* Software Skills
+* Design Experience
+* Selected Clients (if available)
+* Download Creative CV
+
+---
+
+# Portfolio Gallery
+
+The creative section should contain an immersive gallery.
+
+Requirements:
+
+* Masonry or balanced adaptive grid
+* Lazy-loaded images
+* Skeleton loading placeholders
+* Progressive image loading
+* Lightbox preview
+* Keyboard navigation
+* Category filtering
+* Smooth transitions
+* Mobile friendly
+
+The gallery assets already exist inside the project directory.
+
+Use them automatically.
+
+---
+
+# Shared Navigation
+
+Provide minimal navigation that remains consistent across both experiences.
+
+Include:
+
+* Home
+* Technical
+* Creative
+* Contact
+
+Navigation should intelligently adapt to whichever side the visitor is currently viewing.
+
+---
+
+# Contact Section
+
+One shared contact section.
+
+Include:
+
+* email
+* LinkedIn
+* GitHub
+* Behance (if available)
+* downloadable CVs
+* social links
+
+The contact area should visually unify both professional identities.
+
+---
+
+# Motion Design
+
+Animations should be subtle and purposeful.
+
+Examples:
+
+* page turning
+* gentle fade-ins
+* soft parallax
+* typography reveal
+* image loading transitions
+* hover micro-interactions
+* cursor refinement
+* smooth scrolling
+
+Avoid excessive animation libraries.
+
+---
+
+# UX Principles
+
+The website should communicate professionalism within the first few seconds.
+
+Prioritize:
+
+* readability
+* whitespace
+* hierarchy
+* typography
+* accessibility
+* discoverability
+
+The interface should never feel cluttered.
+
+Every element should have a clear purpose.
+
+---
+
+# Technical Expectations
+
+Use modern frontend best practices.
+
+* Component-based architecture
+* Reusable UI components
+* Responsive layouts
+* Lazy-loaded sections
+* Image optimization
+* Accessibility (ARIA where appropriate)
+* Semantic HTML
+* CSS variables for themes
+* Clean animation architecture
+* Maintainable code
+
+---
+
+# Additional Creative Direction
+
+Treat the two professions as two different worlds connected by a single person.
+
+The transition between them should become the signature feature of the website.
+
+The visitor should feel that they are opening two chapters of the same story rather than switching between unrelated portfolios.
+
+The technical side should embody precision, logic, and engineering.
+
+The creative side should embody artistic vision, visual storytelling, and craftsmanship.
+
+Despite their differences, both experiences should clearly belong to the same individual through consistent spacing, interaction patterns, and overall design philosophy.
+
+The final result should feel comparable to an award-winning portfolio featured on Awwwards or CSS Design Awards—minimal, memorable, highly performant, and intentionally crafted rather than visually overloaded.
