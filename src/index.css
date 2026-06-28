@@ -1,6 +1,7 @@
 /* ── Core Design System & Global Styles ──────────────────────── */
 
 :root {
+  color-scheme: light dark;
   /* Default dark theme tokens (Neutral transition state) */
   --bg: #0d0e11;
   --bg-secondary: #14161b;
