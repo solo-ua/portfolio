@@ -7,7 +7,7 @@
 
 .creative-section {
   position: relative;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .creative-border-t {
@@ -15,10 +15,10 @@
 }
 
 .creative-editorial-title {
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-style: italic;
   font-weight: 300;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
@@ -26,34 +26,34 @@
 .creative-about-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
+  gap: 30px;
   align-items: center;
 }
 
 .creative-lead-p {
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-size: 0.92rem;
   line-height: 1.5;
   color: var(--text);
   max-width: 680px;
 }
 
 .creative-summary-card {
-  padding: 36px;
+  padding: 20px;
   border: 1px solid var(--border);
   background-color: var(--bg-secondary);
   border-radius: var(--radius);
 }
 
 .creative-summary-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-style: italic;
   margin-bottom: 1rem;
   color: var(--text);
 }
 
 .creative-summary-card p {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   line-height: 1.62;
   color: var(--text-muted);
 }
@@ -83,18 +83,18 @@
   letter-spacing: 0.1em;
   color: var(--accent);
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .service-title {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text);
 }
 
 .service-desc {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   line-height: 1.58;
   color: var(--text-muted);
 }
@@ -102,14 +102,14 @@
 /* ── Section: Software & Skills ─────────────────────────────── */
 .creative-skills-list-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
 }
 
 .creative-skill-card {
   border: 1px solid var(--border);
   background-color: var(--bg-secondary);
-  padding: 32px;
+  padding: 16px 20px;
   border-radius: var(--radius);
   position: relative;
   transition: border-color 0.4s var(--transition-ease);
@@ -121,25 +121,25 @@
 
 .creative-skill-cat {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 
 .creative-skill-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .creative-skill-item {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   display: flex;
   align-items: center;
@@ -206,7 +206,7 @@
   display: grid;
   gap: 24px;
   align-items: start;
-  max-height: 600px;
+  max-height: 450px;
   overflow-y: auto;
   padding-right: 12px;
   border: 1px solid var(--border);
@@ -340,7 +340,7 @@
 
 .creative-timeline-item {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
 }
 
 .creative-timeline-item:last-child {
@@ -377,31 +377,31 @@
 }
 
 .creative-role {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   font-style: italic;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   color: var(--text);
 }
 
 .creative-company {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .creative-bullets {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .creative-bullets li {
   position: relative;
-  padding-left: 20px;
-  font-size: 0.95rem;
-  line-height: 1.55;
+  padding-left: 16px;
+  font-size: 0.82rem;
+  line-height: 1.45;
   color: var(--text-muted);
 }
 
@@ -416,7 +416,7 @@
 .creative-education-card {
   border: 1px solid var(--border);
   background-color: var(--bg-secondary);
-  padding: 40px;
+  padding: 20px;
   border-radius: var(--radius);
   position: relative;
   transition: border-color 0.4s var(--transition-ease);
@@ -427,9 +427,9 @@
 }
 
 .creative-edu-meta {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 .creative-edu-date {
@@ -442,27 +442,58 @@
 }
 
 .creative-edu-degree {
-  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
   font-style: italic;
   margin-bottom: 4px;
 }
 
 .creative-edu-school {
   font-family: var(--font-serif);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
 }
 
 .creative-edu-desc {
-  font-size: 1rem;
-  line-height: 1.62;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--text-muted);
+}
+
+.creative-double-column-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.creative-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.creative-service-compact-card {
+  border: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+  padding: 15px 20px;
+  border-radius: var(--radius);
+  position: relative;
+  transition: border-color 0.4s var(--transition-ease);
+}
+
+.creative-service-compact-card:hover {
+  border-color: var(--accent);
 }
 
 /* ── Responsive Styling ─────────────────────────────────────── */
 @media (max-width: 900px) {
+  .creative-double-column-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .creative-about-grid {
     grid-template-columns: 1fr;
     gap: 40px;

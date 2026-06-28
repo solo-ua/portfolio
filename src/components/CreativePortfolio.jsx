@@ -66,6 +66,25 @@ export default function CreativePortfolio() {
     "Languages": ["Arabic (Native)", "English (Proficient)", "Russian (Proficient)", "Ukrainian (Fluent)"]
   }
 
+  const creativeServices = [
+    {
+      title: "Branding & Visual Identity",
+      desc: "Creating logo marks, guidelines, print assets, and visual style guides."
+    },
+    {
+      title: "3D Art & Modeling",
+      desc: "Creating atmospheric 3D renders, product visuals, and textured assets in Blender."
+    },
+    {
+      title: "Digital Illustration",
+      desc: "Drawing detailed vector graphics, clothing print vectors, and posters."
+    },
+    {
+      title: "UI/UX Interface Design",
+      desc: "Designing user interfaces and interactive app templates in Figma."
+    }
+  ]
+
   return (
     <div className="creative-portfolio-container" id="creative-portfolio">
       
@@ -92,49 +111,76 @@ export default function CreativePortfolio() {
         </div>
       </section>
 
-      {/* ── Section 2: Experience ── */}
+      {/* ── Section 2: Experience & Skills (Side-by-Side) ── */}
       <section id="creative-experience" className="creative-section creative-border-t">
         <div className="container">
-          <span className="section-label">02 / DESIGN EXPERIENCE</span>
-          <h2 className="creative-editorial-title">Work Experience</h2>
-          
-          <div className="creative-timeline">
+          <div className="creative-double-column-grid">
             
-            {/* Design Job 1 */}
-            <div className="creative-timeline-item fade-in visible">
-              <div className="creative-timeline-meta">
-                <span className="creative-date mono">APR 2025 — PRESENT</span>
-                <span className="creative-loc mono">NEW YORK, USA (REMOTE)</span>
-              </div>
-              <div className="creative-timeline-content">
-                <h3 className="creative-role">Graphic Designer & Creative Operations Associate</h3>
-                <h4 className="creative-company">XRWorkout</h4>
-                <ul className="creative-bullets">
-                  <li>Led creative production for marketing, product, and user-facing digital assets across multiple company initiatives.</li>
-                  <li>Designed visual materials that supported brand consistency, user engagement, and product communication.</li>
-                  <li>Created interface concepts and design assets for internal and external business needs.</li>
-                  <li>Collaborated with product and development teams to align visual design with business objectives.</li>
-                  <li>Supported recruitment, onboarding, scheduling, and operational coordination across distributed teams.</li>
-                  <li>Contributed to content production pipelines for weekly XR fitness experiences.</li>
-                </ul>
+            {/* Left Column: Work Experience */}
+            <div className="creative-experience-col fade-in visible">
+              <span className="section-label">02 / DESIGN EXPERIENCE</span>
+              <h2 className="creative-editorial-title">Work Experience</h2>
+              
+              <div className="creative-timeline">
+                {/* Design Job 1 */}
+                <div className="creative-timeline-item">
+                  <div className="creative-timeline-meta">
+                    <span className="creative-date mono">APR 2025 — PRESENT</span>
+                    <span className="creative-loc mono">NEW YORK (REMOTE)</span>
+                  </div>
+                  <div className="creative-timeline-content">
+                    <h3 className="creative-role">Graphic Designer & Creative Operations Associate</h3>
+                    <h4 className="creative-company">XRWorkout</h4>
+                    <ul className="creative-bullets">
+                      <li>Led creative production for marketing, product, and user-facing digital assets across multiple company initiatives.</li>
+                      <li>Designed visual materials that supported brand consistency, user engagement, and product communication.</li>
+                      <li>Created interface concepts and design assets for internal and external business needs.</li>
+                      <li>Collaborated with product and development teams to align visual design with business objectives.</li>
+                      <li>Supported recruitment, onboarding, scheduling, and operational coordination across distributed teams.</li>
+                      <li>Contributed to content production pipelines for weekly XR fitness experiences.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Design Job 2 */}
+                <div className="creative-timeline-item">
+                  <div className="creative-timeline-meta">
+                    <span className="creative-date mono">APR 2024 — JUN 2025</span>
+                    <span className="creative-loc mono">PORTUGAL (REMOTE) | CONTRACT</span>
+                  </div>
+                  <div className="creative-timeline-content">
+                    <h3 className="creative-role">Graphic Designer & Illustrator</h3>
+                    <h4 className="creative-company">Upwork</h4>
+                    <ul className="creative-bullets">
+                      <li>Designed and delivered over 50 apparel graphics for a Portuguese clothing startup.</li>
+                      <li>Developed the company's visual identity, including logo design and branding assets.</li>
+                      <li>Created print-ready artwork optimized for commercial production workflows.</li>
+                      <li>Collaborated directly with stakeholders to transform concepts into market-ready visual products.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Design Job 2 */}
-            <div className="creative-timeline-item fade-in visible">
-              <div className="creative-timeline-meta">
-                <span className="creative-date mono">APR 2024 — JUN 2025</span>
-                <span className="creative-loc mono">PORTUGAL (REMOTE) | CONTRACT</span>
-              </div>
-              <div className="creative-timeline-content">
-                <h3 className="creative-role">Graphic Designer & Illustrator</h3>
-                <h4 className="creative-company">Upwork</h4>
-                <ul className="creative-bullets">
-                  <li>Designed and delivered over 50 apparel graphics for a Portuguese clothing startup.</li>
-                  <li>Developed the company's visual identity, including logo design and branding assets.</li>
-                  <li>Created print-ready artwork optimized for commercial production workflows.</li>
-                  <li>Collaborated directly with stakeholders to transform concepts into market-ready visual products.</li>
-                </ul>
+            {/* Right Column: Creative Skills list */}
+            <div className="creative-skills-col fade-in visible">
+              <span className="section-label">03 / CREATIVE TOOLKIT</span>
+              <h2 className="creative-editorial-title">Toolkit & Competencies</h2>
+              
+              <div className="creative-skills-list-grid">
+                {Object.entries(creativeSkills).map(([category, items], idx) => (
+                  <div className="creative-skill-card" key={idx}>
+                    <h3 className="creative-skill-cat">{category}</h3>
+                    <ul className="creative-skill-list">
+                      {items.map((item, i) => (
+                        <li key={i} className="creative-skill-item">
+                          <span className="skill-dot"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -145,7 +191,7 @@ export default function CreativePortfolio() {
       {/* ── Section 3: Visual Gallery ── */}
       <section id="creative-gallery" className="creative-section creative-border-t">
         <div className="container">
-          <span className="section-label">03 / VISUAL ARCHIVE</span>
+          <span className="section-label">04 / VISUAL ARCHIVE</span>
           <h2 className="creative-editorial-title">Selected Visual Portfolios</h2>
           
           {/* Categories and Subcategories filtering pills */}
@@ -228,46 +274,44 @@ export default function CreativePortfolio() {
         </div>
       </section>
 
-      {/* ── Section 4: Software & Skills ── */}
+      {/* ── Section 4: Education & Services (Side-by-Side) ── */}
       <section id="creative-skills" className="creative-section creative-border-t">
         <div className="container">
-          <span className="section-label">04 / CREATIVE TOOLKIT</span>
-          <h2 className="creative-editorial-title">Skills & Competencies</h2>
-          
-          <div className="creative-skills-list-grid">
-            {Object.entries(creativeSkills).map(([category, items], idx) => (
-              <div className="creative-skill-card fade-in visible" key={idx} style={{ transitionDelay: `${idx * 0.1}s` }}>
-                <h3 className="creative-skill-cat">{category}</h3>
-                <ul className="creative-skill-list">
-                  {items.map((item, i) => (
-                    <li key={i} className="creative-skill-item">
-                      <span className="skill-dot"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+          <div className="creative-double-column-grid">
+            
+            {/* Left Column: Education */}
+            <div className="creative-education-col fade-in visible">
+              <span className="section-label">05 / ACADEMIC RECORD</span>
+              <h2 className="creative-editorial-title">Education</h2>
+              
+              <div className="creative-education-card">
+                <div className="creative-edu-meta">
+                  <span className="creative-edu-date mono">2022 — 2025</span>
+                  <h3 className="creative-edu-degree">B.Sc. Computer Science</h3>
+                  <h4 className="creative-edu-school">Lebanese International University</h4>
+                </div>
+                <p className="creative-edu-desc">
+                  GPA: 3.68/4.00 | Dean's Honor List (4x)<br /><br />
+                  <strong>Relevant Coursework:</strong> Human-Computer Interaction, Software Engineering, Web Development, Digital Systems, Machine Learning
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 5: Education ── */}
-      <section id="creative-education" className="creative-section creative-border-t">
-        <div className="container">
-          <span className="section-label">05 / ACADEMIC RECORD</span>
-          <h2 className="creative-editorial-title">Education</h2>
-          
-          <div className="creative-education-card fade-in visible">
-            <div className="creative-edu-meta">
-              <span className="creative-edu-date mono">2022 — 2025</span>
-              <h3 className="creative-edu-degree">B.Sc. Computer Science</h3>
-              <h4 className="creative-edu-school">Lebanese International University</h4>
             </div>
-            <p className="creative-edu-desc">
-              GPA: 3.68/4.00 | Dean's Honor List (4x)<br /><br />
-              <strong>Relevant Coursework:</strong> Human-Computer Interaction, Software Engineering, Web Development, Digital Systems, Machine Learning
-            </p>
+
+            {/* Right Column: Services list */}
+            <div className="creative-services-col fade-in visible">
+              <span className="section-label">06 / SERVICES</span>
+              <h2 className="creative-editorial-title">Visual Deliverables</h2>
+              <div className="creative-services-list">
+                {creativeServices.map((service, idx) => (
+                  <div className="creative-service-compact-card" key={idx}>
+                    <span className="service-number mono">0{idx + 1}</span>
+                    <h3 className="service-title">{service.title}</h3>
+                    <p className="service-desc">{service.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

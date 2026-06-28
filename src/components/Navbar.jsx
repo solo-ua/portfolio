@@ -17,20 +17,17 @@ export default function Navbar({ activeSide, setActiveSide, lightMode, setLightM
     navLinks.push(
       { label: 'Home', action: () => { setActiveSide(null); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
       { label: 'About', href: '#tech-about' },
-      { label: 'Experience', href: '#tech-experience' },
-      { label: 'Projects', href: '#tech-projects' },
-      { label: 'Skills', href: '#tech-skills' },
-      { label: 'Education', href: '#tech-education' },
+      { label: 'Experience & Edu', href: '#tech-experience' },
+      { label: 'Projects & Skills', href: '#tech-projects-skills' },
       { label: 'Contact', href: '#contact' }
     )
   } else if (activeSide === 'creative') {
     navLinks.push(
       { label: 'Home', action: () => { setActiveSide(null); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
       { label: 'About', href: '#creative-about' },
-      { label: 'Experience', href: '#creative-experience' },
+      { label: 'Experience & Skills', href: '#creative-experience' },
       { label: 'Gallery', href: '#creative-gallery' },
-      { label: 'Skills', href: '#creative-skills' },
-      { label: 'Education', href: '#creative-education' },
+      { label: 'Education & Services', href: '#creative-skills' },
       { label: 'Contact', href: '#contact' }
     )
   } else {

@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   const [activeSide, setActiveSide] = useState(null) // 'tech' | 'creative' | null
-  const [lightMode, setLightMode] = useState(false) // light mode state
+  const [lightMode, setLightMode] = useState(true) // light mode state (default to true)
 
   // Update body theme attribute when active side changes
   useEffect(() => {

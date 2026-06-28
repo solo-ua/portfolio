@@ -102,44 +102,44 @@ export default function TransitionSection({ activeSide, setActiveSide }) {
         </div>
 
         {/* OVERLAY: The Cover Page (Clipped and peeled away) */}
-        {progress < 0.85 && (
-          <div 
-            className="peel-overlay-page"
-            style={{
-              clipPath: `polygon(0% 0%, 100% 0%, 100% ${peelY}%, ${peelX}% 100%, 0% 100%)`,
-              opacity: opacity
-            }}
-          >
-            <div className="overlay-page-grid">
-              <div className="overlay-line-v"></div>
-              <div className="overlay-page-content">
-                <span className="mono overlay-label">THE TRANSITION</span>
-                <h2 className="overlay-heading">One Creator.<br />Two Dual Realities.</h2>
-                <p className="overlay-p">
-                  A professional career divided into two halves. Scroll down to peel back the page and select which chapter you want to read.
-                </p>
-                <div className="peel-scroll-hint">
-                  <span className="mono animate-pulse">KEEP SCROLLING TO PEEL PAGE ↓</span>
-                </div>
+        <div 
+          className="peel-overlay-page"
+          style={{
+            clipPath: `polygon(0% 0%, 100% 0%, 100% ${peelY}%, ${peelX}% 100%, 0% 100%)`,
+            opacity: opacity,
+            pointerEvents: progress >= 0.85 ? 'none' : 'auto',
+            visibility: progress >= 0.85 ? 'hidden' : 'visible'
+          }}
+        >
+          <div className="overlay-page-grid">
+            <div className="overlay-line-v"></div>
+            <div className="overlay-page-content">
+              <span className="mono overlay-label">THE TRANSITION</span>
+              <h2 className="overlay-heading">One Creator.<br />Two Dual Realities.</h2>
+              <p className="overlay-p">
+                A professional career divided into two halves. Scroll down to peel back the page and select which chapter you want to read.
+              </p>
+              <div className="peel-scroll-hint">
+                <span className="mono animate-pulse">KEEP SCROLLING TO PEEL PAGE ↓</span>
               </div>
             </div>
           </div>
-        )}
+        </div>
 
         {/* THE FOLDED BACK PAGE CORNER (The curling physical page flap) */}
-        {progress > 0 && progress < 0.85 && (
-          <div 
-            className="peel-corner-flap"
-            style={{
-              clipPath: `polygon(${peelX}% 100%, 100% ${peelY}%, ${peelX}% ${peelY}%)`,
-              opacity: opacity
-            }}
-          >
-            <div className="peel-corner-inner">
-              <div className="peel-reflection-line"></div>
-            </div>
+        <div 
+          className="peel-corner-flap"
+          style={{
+            clipPath: `polygon(${peelX}% 100%, 100% ${peelY}%, ${peelX}% ${peelY}%)`,
+            opacity: opacity,
+            pointerEvents: 'none',
+            visibility: (progress > 0 && progress < 0.85) ? 'visible' : 'hidden'
+          }}
+        >
+          <div className="peel-corner-inner">
+            <div className="peel-reflection-line"></div>
           </div>
-        )}
+        </div>
 
       </div>
     </section>

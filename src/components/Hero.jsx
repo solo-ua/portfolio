@@ -37,11 +37,10 @@ export default function Hero() {
           <div className="hero-text-col">
             <span className="hero-intro-tag mono fade-in visible">00 / INTRODUCTION</span>
             <h1 className="hero-title fade-in visible">
-              Mariia<br />
-              <span className="serif-italic">Khiershi</span>
+              Developer, Designer & 3D Artist
             </h1>
             <h2 className="hero-subtitle fade-in visible">
-              Developer, Designer & 3D Artist
+              Mariia Khiershi
             </h2>
             <p className="hero-description fade-in visible">
               Operating at the intersection of logical software engineering and creative craftsmanship. I build scalable full-stack web platforms, design brand identities, and render atmospheric 3D digital worlds.
