@@ -20,8 +20,8 @@ export default function Contact({ activeSide }) {
               Open to contract work, full-time positions, and collaborations at the intersection of engineering and design.
             </p>
             
-            <a href="mailto:mariahershi@gmail.com" className="contact-email-link">
-              mariahershi@gmail.com
+            <a href="mailto:mariiakhiershi@gmail.com" className="contact-email-link">
+              Mariiakhiershi@gmail.com
             </a>
 
             <div className="contact-social-row">

@@ -75,7 +75,7 @@ export default function TransitionSection({ activeSide, setActiveSide }) {
                   Focused on computer science architecture, database design, REST APIs, and business operations automation.
                 </p>
                 <button className="btn btn-secondary choice-btn">
-                  I'm interested in your
+                  Technical portfolio
                 </button>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function TransitionSection({ activeSide, setActiveSide }) {
                   Focused on graphic branding, 3D modelling/texturing, digital illustration, and immersive UI/UX experiences.
                 </p>
                 <button className="btn btn-secondary choice-btn">
-                  Let's explore your creative career
+                  Creative portfolio
                 </button>
               </div>
             </div>
